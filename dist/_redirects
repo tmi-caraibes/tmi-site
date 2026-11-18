@@ -1,0 +1,35 @@
+# Anciennes adresses (.html) vers les adresses propres
+/index.html / 301!
+/entreprise.html /entreprise/ 301!
+/expertises.html /expertises/ 301!
+/realisations.html /realisations/ 301!
+/materiel.html /materiel/ 301!
+/engagements.html /engagements/ 301!
+/carrieres.html /carrieres/ 301!
+/contact.html /contact/ 301!
+/mentions-legales.html /mentions-legales/ 301!
+/reseaux-eau-potable-assainissement-guadeloupe.html /reseaux-eau-potable-assainissement-guadeloupe/ 301!
+/enrobes-voirie-guadeloupe-saint-martin.html /enrobes-voirie-guadeloupe-saint-martin/ 301!
+/vrd-terrassement-guadeloupe.html /vrd-terrassement-guadeloupe/ 301!
+/fondations-speciales-parasismique-guadeloupe.html /fondations-speciales-parasismique-guadeloupe/ 301!
+/batiment-genie-civil-guadeloupe.html /batiment-genie-civil-guadeloupe/ 301!
+/chantier-aep-assainissement-cornet-petit-canal.html /chantier-aep-assainissement-cornet-petit-canal/ 301!
+/chantier-enrobe-rue-de-hollande-marigot.html /chantier-enrobe-rue-de-hollande-marigot/ 301!
+/chantier-enrobe-friars-bay-saint-martin.html /chantier-enrobe-friars-bay-saint-martin/ 301!
+/chantier-enrobe-rue-colombier-saint-martin.html /chantier-enrobe-rue-colombier-saint-martin/ 301!
+/chantier-enrobe-froston-saint-martin.html /chantier-enrobe-froston-saint-martin/ 301!
+/chantier-pont-de-vanier-vieux-habitants.html /chantier-pont-de-vanier-vieux-habitants/ 301!
+/chantier-amenagement-securisation-vieux-fort.html /chantier-amenagement-securisation-vieux-fort/ 301!
+/chantier-amenagement-voirie-capesterre-belle-eau.html /chantier-amenagement-voirie-capesterre-belle-eau/ 301!
+/chantier-travaux-urgence-soufriere-saint-claude.html /chantier-travaux-urgence-soufriere-saint-claude/ 301!
+/chantier-renforcement-parasismique-bergevin-pointe-a-pitre.html /chantier-renforcement-parasismique-bergevin-pointe-a-pitre/ 301!
+/chantier-confortement-talus-vieux-fort.html /chantier-confortement-talus-vieux-fort/ 301!
+/chantier-micropieux-belle-plaine-le-gosier.html /chantier-micropieux-belle-plaine-le-gosier/ 301!
+/chantier-mur-soutenement-spring-saint-martin.html /chantier-mur-soutenement-spring-saint-martin/ 301!
+/chantier-rehabilitation-class-vieux-habitants.html /chantier-rehabilitation-class-vieux-habitants/ 301!
+/chantier-creche-vieux-habitants.html /chantier-creche-vieux-habitants/ 301!
+/chantier-aep-quai-6-port-guadeloupe.html /chantier-aep-quai-6-port-guadeloupe/ 301!
+/chantier-confortement-parasismique-legitimus.html /chantier-confortement-parasismique-legitimus/ 301!
+
+# Pages inexistantes
+/* /404.html 404

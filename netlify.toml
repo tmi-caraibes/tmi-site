@@ -1,0 +1,5 @@
+# Site statique déjà construit : Netlify publie le dossier dist/ tel quel (pas de commande de build).
+# Les redirections et en-têtes sont dans dist/_redirects et dist/_headers (générés par build.py).
+[build]
+  publish = "dist"
+  command = ""
