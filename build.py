@@ -292,6 +292,8 @@ REFS = [
   "Asphalt works to make the Vanier bridge safer, about 100 tonnes laid."),
 ]
 
+def fmt_ht(n):
+    return fmt_eur(n) + (' excl. VAT' if LANG == 'en' else ' HT')
 def fmt_eur(n):
     if LANG == 'en':
         return '€' + f"{n:,}"
@@ -380,7 +382,7 @@ def ccard(c):
             f'<span class="ccap" data-en="{a(cap[1])}">{esc(cap[0])}</span></div>'
             f'<div class="bd">{T(cfr, cen, "span", "cat")}{T(tfr, ten, "h3")}'
             f'<div class="meta">{T(moa[0], moa[1])}<span>{terr}</span>'
-            + (f'<span class="amt">{fmt_eur(AMOUNTS[tfr])} HT</span>' if tfr in AMOUNTS else '') + '</div></div></article>')
+            + (f'<span class="amt">{fmt_ht(AMOUNTS[tfr])}</span>' if tfr in AMOUNTS else '') + '</div></div></article>')
 
 def crow(c, link=None):
     cat, st, tfr, ten, moa, terr, *_ = c
@@ -388,7 +390,7 @@ def crow(c, link=None):
     live = ' live' if st is ST_EC else ''
     ttl = f'<strong><a href="{link}" data-en="{a(ten)}">{esc(tfr)}</a></strong>' if link else T(tfr, ten, "strong")
     return (f'<li class="crow">{T(cfr, cen, "span", "cat")}{ttl}{T(moa[0], moa[1], "span", "moa")}'
-            f'<span class="terr">{terr}</span><span class="amt">{(fmt_eur(AMOUNTS[tfr]) + " HT") if tfr in AMOUNTS else ""}</span><span class="st{live}" data-en="{a(st[1])}">{esc(st[0])}</span></li>')
+            f'<span class="terr">{terr}</span><span class="amt">{fmt_ht(AMOUNTS[tfr]) if tfr in AMOUNTS else ""}</span><span class="st{live}" data-en="{a(st[1])}">{esc(st[0])}</span></li>')
 
 SLUGS = {'reseaux': 'reseaux-eau-potable-assainissement-guadeloupe.html', 'routes': 'enrobes-voirie-guadeloupe-saint-martin.html',
          'vrd': 'vrd-terrassement-guadeloupe.html', 'speciaux': 'fondations-speciales-parasismique-guadeloupe.html',

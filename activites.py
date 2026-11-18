@@ -325,7 +325,7 @@ def page_chantier(act, slug, title, place, moa, dur, amt_txt, status, desc, phot
                  title_en=f"{ten}, {place} | TMI", desc_en=f"{desc[1]} Client: {moa[1]}.", extra_ld_en=ld_for('en'))
         rows = [("Maître d'ouvrage", "Client", T(moa[0], moa[1])), ("Lieu", "Location", esc(place)), ("Métier", "Trade", T(cfr, cen))]
         if dur: rows.append(("Durée", "Duration", T(dur[0], dur[1])))
-        if amt_txt: rows.append(("Montant", "Amount", amt_txt))
+        if amt_txt: rows.append(("Montant", "Amount", fmt_ht(amt_txt[1]) if amt_txt[0] == 'ht' else fmt_eur(amt_txt[1])))
         rows.append(("Statut", "Status", T(status[0], status[1])))
         fiche = ''.join(f'<div><dt data-en="{a(e)}">{esc(f)}</dt><dd>{v}</dd></div>' for f, e, v in rows)
         gal = ''.join(f'<figure class="ch-photo">{pic(p, tfr, ten, sizes="(max-width:700px) 100vw, 600px")}</figure>' for p in photos[1:])
@@ -369,8 +369,8 @@ def page_chantier(act, slug, title, place, moa, dur, amt_txt, status, desc, phot
 for _k, _slug in CH_SLUG.items():
     r = REF_BY_IMG[_k]
     img, cat, tfr, ten, place, moa, dur, amt, dfr, den = r
-    PAGES_EXTRA[_slug] = page_chantier(REF_ACT[_k], _slug, (tfr, ten), place, moa, dur, fmt_eur(amt), ('Livré en 2025', 'Delivered in 2025'), (dfr, den), [img], cat)
+    PAGES_EXTRA[_slug] = page_chantier(REF_ACT[_k], _slug, (tfr, ten), place, moa, dur, ('ttc', amt), ('Livré en 2025', 'Delivered in 2025'), (dfr, den), [img], cat)
 for _t, (_slug, _ph, _dfr, _den) in CH_2026.items():
     c = CUR_BY_TITLE[_t]
     cat, st, tfr, ten, moa, terr, *_ = c
-    PAGES_EXTRA[_slug] = page_chantier(CUR_ACT[_t], _slug, (tfr, ten), terr, moa, None, fmt_eur(AMOUNTS[tfr]) + ' HT', st, (_dfr, _den), _ph, cat)
+    PAGES_EXTRA[_slug] = page_chantier(CUR_ACT[_t], _slug, (tfr, ten), terr, moa, None, ('ht', AMOUNTS[tfr]), st, (_dfr, _den), _ph, cat)

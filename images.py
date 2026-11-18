@@ -4,7 +4,7 @@ import os, glob, shutil
 
 def _save_variant(im, w, dest):
     v = im if w == im.width else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
-    v.save(dest, 'WEBP', quality=80 if w <= 800 else 78, method=6)
+    v.save(dest, 'WEBP', quality=72 if w <= 480 else (68 if w <= 800 else 78), method=6)
 
 def build_images(dests):
     for d in dests:
