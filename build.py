@@ -903,7 +903,7 @@ def page_carrieres():
     <div>{T("Nos métiers", "Our jobs", 'p', 'kicker')}{T("Les métiers de nos chantiers", "The jobs on our sites", 'h2')}</div>
     {T("Nous étudions toutes les candidatures, avec ou sans poste ouvert. Indiquez le métier visé et votre secteur.", "We consider every application, whether or not a position is open. Tell us the job you are looking for and your area.", 'p', 'lead')}
   </div>
-  <div class="pillars" style="grid-template-columns:repeat(3,1fr)">{jl}</div>
+  <div class="pillars p3">{jl}</div>
 </div></section>
 
 <section class="sect tint"><div class="wrap split top">

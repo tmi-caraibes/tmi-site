@@ -381,7 +381,7 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .cvis img{width:100%;height:100%;object-fit:cover}
 .ccap{position:absolute;right:0;bottom:0;background:rgba(0,23,70,.82);color:#fff;font-size:.8rem;padding:.35rem .7rem}
 .crows{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;border-top:2px solid var(--marine)}
-.crow{display:grid;grid-template-columns:200px minmax(0,2.2fr) minmax(0,1.2fr) 130px 130px;gap:1.25rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--ligne)}
+.crow{display:grid;grid-template-columns:180px minmax(0,2.2fr) minmax(0,1.3fr) 110px 130px 120px;gap:1.25rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--ligne)}
 .crow.head{font-size:.85rem;color:var(--gris);padding:.7rem 0}
 .crow .cat{font-size:.86rem;font-weight:650;color:var(--bleu-fonce)}
 .crow strong{font-stretch:104%;font-size:1.02rem;line-height:1.3}
@@ -395,7 +395,8 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
   .crow .cat{grid-column:1/-1}
   .crow strong{grid-column:1}
   .crow .st{grid-column:2;grid-row:2;justify-self:end}
-  .crow .moa,.crow .terr{grid-column:1}
+  .crow .moa,.crow .terr,.crow .amt{grid-column:1}
+  .crow strong{font-size:1rem}
 }
 
 .exp-photo img{aspect-ratio:4/3;height:auto}
@@ -412,11 +413,9 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .flag li{color:#C9D3E1;font-size:.96rem;padding-left:1rem;position:relative}
 .flag li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;background:var(--bleu)}
 @media (max-width:980px){.flags{grid-template-columns:1fr}}
-.crow{grid-template-columns:180px minmax(0,2.2fr) minmax(0,1.3fr) 110px 130px 120px}
 .crow .amt{font-weight:750;color:var(--marine);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95rem}
 .ccard .meta .amt{font-weight:750;color:var(--marine)}
 [id="2026"] .cards{grid-template-columns:repeat(2,1fr)}
-@media (max-width:980px){.crow .amt{grid-column:1}}
 @media (max-width:620px){[id="2026"] .cards{grid-template-columns:1fr}}
 
 /* Pages métier */
